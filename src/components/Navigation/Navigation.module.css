@@ -1,0 +1,16 @@
+.link {
+  text-decoration: none;
+  color: rgb(20, 23, 20);
+  text-transform: uppercase;
+}
+
+.isActive {
+  color: forestgreen;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+    padding: 20px 20px;
+    border-bottom: 2px solid rgb(20, 23, 20) ;
+}

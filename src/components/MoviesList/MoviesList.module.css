@@ -1,0 +1,35 @@
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.listItem {
+  flex: 1 1 calc(25% - 16px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.listItem:hover {
+  transform: translateY(-10px);
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.listItemTitle {
+  margin: 8px 0;
+  padding: 0 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
