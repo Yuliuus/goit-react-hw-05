@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import css from "./MoviesList.module.css";
 
 export default function MoviesList({ movies }) {
@@ -10,7 +11,9 @@ export default function MoviesList({ movies }) {
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt={movie.title}
           />
-          <p className={css.listItemTitle}>{movie.title}</p>
+          <Link to={`/movies/${movie.id}`} className={css.listItemTitle}>
+            {movie.title}
+          </Link>
         </li>
       ))}
     </ul>

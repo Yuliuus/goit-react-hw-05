@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.imgPoster {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+.posterInfo {
+  flex: 1;
+  padding-left: 16px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #333;
+}
