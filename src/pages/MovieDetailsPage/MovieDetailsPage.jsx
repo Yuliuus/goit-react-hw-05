@@ -59,7 +59,9 @@ export default function MovieDetailsPage() {
             <NavLink to="reviews">Reviews</NavLink>
           </li>
         </ul>
-        <Outlet />
+        <Suspense fallback={<div>Loading, please wait</div>}>
+          <Outlet />
+        </Suspense>
       </div>
     </div>
   );
