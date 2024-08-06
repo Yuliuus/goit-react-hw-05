@@ -30,6 +30,7 @@ export default function MovieCast() {
   return (
     <div className={css.container}>
       {loading && <p>Loading...</p>}
+      {!loading && reviews.length === 0 && <p>No reviews available!</p>}
       {reviews.length > 0 && (
         <>
           <h2>Reviews</h2>

@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { App } from "./App.css";
 import Navigation from "../Navigation/Navigation";
 import HomePage from "../../pages/HomePage/HomePage";
 import MoviesPage from "../../pages/MoviesPage/MoviesPage";
@@ -8,11 +9,9 @@ import MovieCast from "../../components/MovieCast/MovieCast";
 import MovieReviews from "../MovieReviews/MovieReviews";
 
 function App() {
-  const ApiKey = "7cfec34fe89dc88d71b750f0c2e81981";
   return (
     <div>
       <Navigation />
-
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/movies" element={<MoviesPage />} />

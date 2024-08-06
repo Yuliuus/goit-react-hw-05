@@ -1,8 +1,12 @@
-import { useEffect, useState } from "react";
-import { NavLink, Outlet, useParams } from "react-router-dom";
-
+import { useEffect, useRef, useState } from "react";
+import {
+  Link,
+  NavLink,
+  Outlet,
+  useParams,
+  useLocation,
+} from "react-router-dom";
 import { getMovieById } from "../../movies-api";
-
 import css from "./MovieDetailsPage.module.css";
 
 export default function MovieDetailsPage() {
@@ -10,6 +14,10 @@ export default function MovieDetailsPage() {
 
   const [loading, setLoading] = useState(false);
   const [movie, setMovie] = useState([]);
+
+  const location = useLocation();
+  console.log(location);
+  const backLinkRef = useRef(location.state ?? "/movies");
 
   useEffect(() => {
     if (!movie) {
@@ -32,6 +40,9 @@ export default function MovieDetailsPage() {
   return (
     <div className={css.container}>
       {loading && <p>Loading...</p>}
+      <Link to={backLinkRef.current} className={css.goBackButton}>
+        Go back
+      </Link>
       <img
         className={css.imgPoster}
         src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}

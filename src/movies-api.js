@@ -5,6 +5,10 @@ const AccessKey = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3Y2ZlYzM0ZmU4OWRjODhkNzFiNzUw
 
 axios.defaults.headers.common["Authorization"] = `Bearer ${AccessKey}`;
 
+const defaultParams = {
+  language: "en-US",
+};
+
 export const getTrendingMovies = async () => {
   const responce = await axios.get("/trending/movie/day")
   return responce.data;
@@ -22,5 +26,16 @@ export const getMovieCast = async (id) => {
 
 export const getMovieReviews = async (id) => {
   const response = await axios.get(`/movie/${id}/reviews`);
+  return response.data;
+};
+
+export const getSearchMovies = async (query, page = 1) => {
+  const response = await axios.get(`/search/movie`, {
+    ...defaultParams,
+    params: {
+      query,
+      page,
+    },
+  });
   return response.data;
 };

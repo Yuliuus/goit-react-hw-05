@@ -6,6 +6,7 @@ import MoviesList from "../../components/MoviesList/MoviesList";
 export default function HomePage() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchTrendingMovies = async () => {
@@ -13,9 +14,9 @@ export default function HomePage() {
         setLoading(true);
         const response = await getTrendingMovies();
         setMovies(response.results);
-        console.log(response)
+        console.log(response);
       } catch (error) {
-        console.log(error);
+        setError(true);
       } finally {
         setLoading(false);
       }
@@ -27,7 +28,8 @@ export default function HomePage() {
     <div>
       <h2>Trending today</h2>
       {loading && <p>Loading...</p>}
-    <MoviesList movies={movies}/>
+      {error && <p>Something went wrong. Please try again.</p>}
+      <MoviesList movies={movies} />
     </div>
   );
 }

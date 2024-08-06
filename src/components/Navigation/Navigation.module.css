@@ -2,15 +2,19 @@
   text-decoration: none;
   color: rgb(20, 23, 20);
   text-transform: uppercase;
+  font-weight: bold;
+}
+.link:hover {
+  color: #45a049;
 }
 
 .isActive {
-  color: forestgreen;
+  color: #4caf50;
 }
 
 .nav {
-    display: flex;
-    gap: 25px;
-    padding: 20px 20px;
-    border-bottom: 2px solid rgb(20, 23, 20) ;
+  display: flex;
+  gap: 25px;
+  padding: 20px 20px;
+  border-bottom: 2px solid rgb(20, 23, 20);
 }

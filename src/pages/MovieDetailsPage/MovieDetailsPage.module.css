@@ -22,3 +22,21 @@
   margin-bottom: 16px;
   color: #333;
 }
+.goBackButton {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+ .goBackButton:hover {
+  color: #45a049;
+ }

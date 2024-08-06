@@ -37,3 +37,31 @@
 .link {
   text-decoration: none;
 }
+
+.searchForm {
+  display: flex;
+  gap: 8px;
+  margin: 16px;
+  max-width: 300px;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 8px;
+  border: 2px solid #4caf50;
+  border-radius: 4px;
+  outline: none;
+}
+
+.searchBtn {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.searchBtn:hover {
+  background-color: #45a049;
+}
